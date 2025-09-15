@@ -1,8 +1,7 @@
 // Cấu hình
-const SHEET_ID = '1KuCZXLFbW3oZQ_7RVb2nVngcKOHlRcU5hu3ebMedI84';
+const SHEET_ID = '1GoknzMvaFbKlGiax4bPoYZWS6HZVUQEeqnjIKlNtuC8'; // Thay đổi dòng này
 const SHEET_NAME = 'Sheet1';
 const API_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}`;
-
 // Các đối tượng DOM
 const productList = document.getElementById('product-list');
 const paginationContainer = document.getElementById('pagination-container');
