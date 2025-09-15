@@ -16,30 +16,22 @@
 
     <div class="banner-container">
         <div class="banner-slide fade">
-            <img src="https://sagatexvietnam.vn/wp-content/uploads/2025/01/chan-ga-goi-cotton-100-mau-xanh-thien-thanh-SAGATEX-1.png" alt="Banner 1">
+            <img src="https://lh3.googleusercontent.com/d/1rhgoADzSHLQEwxmJQiK4gkevHXMgHN6a" alt="Banner 1">
         </div>
         <div class="banner-slide fade">
-            <img src="https://sagatexvietnam.vn/wp-content/uploads/2025/01/chan-ga-goi-cotton-100-mau-xanh-thien-thanh-SAGATEX-2.png" alt="Banner 2">
+            <img src="https://lh3.googleusercontent.com/d/1rhgoADzSHLQEwxmJQiK4gkevHXMgHN6a" alt="Banner 2">
         </div>
         <div class="banner-slide fade">
-            <img src="https://sagatexvietnam.vn/wp-content/uploads/2025/01/chan-ga-goi-cotton-100-mau-xanh-thien-thanh-SAGATEX-1.png" alt="Banner 3">
+            <img src="https://lh3.googleusercontent.com/d/1rhgoADzSHLQEwxmJQiK4gkevHXMgHN6a" alt="Banner 3">
         </div>
         <div class="banner-dots" style="text-align:center"></div>
     </div>
     <div class="container">
         <aside class="sidebar">
             <h3><i class="fa-solid fa-filter"></i> Lọc Sản Phẩm</h3>
-            <div class="filter-group">
-                <button class="filter-toggle">Giá <i class="fa-solid fa-chevron-down"></i></button>
-                <div class="filter-options">
-                    <label><input type="checkbox" name="price" value="0-1000000"> Dưới 1.000.000 ₫</label>
-                    <label><input type="checkbox" name="price" value="1000000-2000000"> 1.000.000 ₫ - 2.000.000 ₫</label>
-                    <label><input type="checkbox" name="price" value="2000000-3000000"> 2.000.000 ₫ - 3.000.000 ₫</label>
-                </div>
-            </div>
              <div class="filter-group">
-                <button class="filter-toggle">Màu Sắc <i class="fa-solid fa-chevron-down"></i></button>
-                <div class="filter-options" data-filter-type="color">
+                <button class="filter-toggle">Danh mục <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="filter-options" data-filter-type="category">
                     <!-- Color options will be populated by JavaScript -->
                 </div>
             </div>
@@ -48,6 +40,10 @@
         <main class="main-content">
             <header class="page-header">
                 <h1>Sản phẩm nổi bật</h1>
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                </div>
                 <div class="sort-options">
                     <select name="sort" id="sort-select">
                         <option value="newest">Mới nhất</option>
@@ -60,20 +56,34 @@
             <div id="product-list" class="product-grid">
                 <div class="loading">Đang tải sản phẩm...</div>
             </div>
+            <div id="pagination-container" class="pagination-container"></div>
         </main>
     </div>
 
     <div id="contact-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <h2>Thông tin liên hệ</h2>
-            <p>Vui lòng liên hệ qua:</p>
-            <ul>
-                <li><strong>Số điện thoại:</strong> 0987.654.321</li>
-                <li><strong>Email:</strong> lienhe@thegioigiacngu.com</li>
-            </ul>
+            <div id="modal-product-detail">
+                <div id="modal-product-image" class="modal-image-container"></div>
+                <h2 id="modal-product-name">Tên sản phẩm</h2>
+                <p id="modal-product-description">Mô tả sản phẩm.</p>
+                <div class="price-container">
+                    <span id="modal-product-price" class="current-price"></span>
+                    <span id="modal-product-original-price" class="original-price"></span>
+                </div>
+                <hr style="margin: 1.5rem 0;">
+                <h3>Thông tin liên hệ</h3>
+                <p>Để đặt hàng hoặc cần tư vấn thêm, bạn vui lòng liên hệ qua:</p>
+                <p><strong>Số điện thoại/Zalo:</strong> 0963.583.079</p>
+            </div>
         </div>
     </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Bản quyền thuộc về NL Group.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

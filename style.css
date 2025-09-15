@@ -140,6 +140,27 @@ body {
     border-radius: 4px;
 }
 
+/* --- Search Bar --- */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px; /* Có thể điều chỉnh */
+}
+
+.search-container i {
+    position: absolute;
+    left: 10px;
+    color: #aaa;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 2rem; /* Thêm padding bên trái cho icon */
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
 /* --- Lưới sản phẩm --- */
 .product-grid {
     display: grid;
@@ -198,6 +219,8 @@ body {
     font-size: 0.9rem;
     color: #666;
     margin: 0.5rem 0;
+    /* Ẩn mô tả trên trang chủ */
+    display: none;
 }
 
 .price-container {
@@ -205,6 +228,8 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    /* Ẩn giá trên trang chủ */
+    display: none;
 }
 
 .current-price {
@@ -220,4 +245,34 @@ body {
 }
 
 /* --- Modal (Giữ nguyên) --- */
-.modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5)}.modal-content{background-color:#fff;margin:15% auto;padding:2rem;border:1px solid #888;width:80%;max-width:500px;border-radius:8px;position:relative}.close-button{color:#aaa;float:right;font-size:28px;font-weight:bold;position:absolute;top:10px;right:20px}.close-button:hover,.close-button:focus{color:black;text-decoration:none;cursor:pointer}
+.modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);overflow-y:auto;padding-top:5vh;padding-bottom:5vh}.modal-content{background-color:#fff;margin:0 auto;padding:2rem;border:1px solid #888;width:80%;max-width:500px;border-radius:8px;position:relative;max-height:90vh;overflow-y:auto}.close-button{color:#aaa;float:right;font-size:28px;font-weight:bold;position:absolute;top:10px;right:20px}.close-button:hover,.close-button:focus{color:black;text-decoration:none;cursor:pointer}
+
+/* --- Modal Product Image --- */
+.modal-image-container {
+    width: 100%;
+    padding-top: 100%; /* Tạo tỷ lệ 1:1 cho ảnh vuông */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-container p {
+    font-size: 0.9rem; /* Làm cho chữ nhỏ hơn */
+    margin: 0; /* Bỏ khoảng cách mặc định của thẻ <p> */
+}
