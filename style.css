@@ -1,0 +1,223 @@
+/* --- Header & Logo --- */
+.site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    max-width: 1400px; /* Căn chỉnh với chiều rộng của thân trang */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    height: 45px; /* Điều chỉnh chiều cao logo cho phù hợp */
+    width: auto;
+}
+
+/* --- Banner --- */
+.banner-container {
+    max-width: 1400px;
+    position: relative;
+    margin: 1rem auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.banner-slide {
+    display: none; /* Ẩn tất cả slide ban đầu */
+}
+
+.banner-slide img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.banner-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot{cursor:pointer;height:15px;width:15px;margin:0 2px;background-color:#bbb;border-radius:50%;display:inline-block;transition:background-color .6s ease}.active,.dot:hover{background-color:#717171}
+
+/* --- Cài đặt chung --- */
+:root {
+    --primary-color: #003366; /* Màu xanh navy đậm */
+    --secondary-color: #f39c12; /* Màu cam cho khuyến mãi */
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: var(--text-color);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Sidebar 280px, còn lại cho nội dung */
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* --- Sidebar Bộ lọc --- */
+.sidebar {
+    border-right: 1px solid var(--border-color);
+    padding-right: 2rem;
+}
+
+.sidebar h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.filter-group {
+    border-bottom: 1px solid var(--light-gray);
+    padding: 1rem 0;
+}
+
+.filter-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.filter-options {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-options label {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+/* --- Nội dung chính --- */
+.main-content {
+    width: 100%;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+#sort-select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+/* --- Lưới sản phẩm --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.product-image-container {
+    position: relative;
+}
+
+.product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.product-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.price-container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.current-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.original-price {
+    font-size: 1rem;
+    color: #888;
+    text-decoration: line-through;
+}
+
+/* --- Modal (Giữ nguyên) --- */
+.modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5)}.modal-content{background-color:#fff;margin:15% auto;padding:2rem;border:1px solid #888;width:80%;max-width:500px;border-radius:8px;position:relative}.close-button{color:#aaa;float:right;font-size:28px;font-weight:bold;position:absolute;top:10px;right:20px}.close-button:hover,.close-button:focus{color:black;text-decoration:none;cursor:pointer}

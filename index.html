@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng Chăn Drap Gối Nệm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+        <header class="site-header">
+        <div class="header-container">
+            <img src="logo.jpg" alt="Logo Cửa Hàng" class="logo">
+            </div>
+        </header> <!-- Thẻ đóng header được di chuyển đến đây -->
+
+    <div class="banner-container">
+        <div class="banner-slide fade">
+            <img src="https://sagatexvietnam.vn/wp-content/uploads/2025/01/chan-ga-goi-cotton-100-mau-xanh-thien-thanh-SAGATEX-1.png" alt="Banner 1">
+        </div>
+        <div class="banner-slide fade">
+            <img src="https://sagatexvietnam.vn/wp-content/uploads/2025/01/chan-ga-goi-cotton-100-mau-xanh-thien-thanh-SAGATEX-2.png" alt="Banner 2">
+        </div>
+        <div class="banner-slide fade">
+            <img src="https://sagatexvietnam.vn/wp-content/uploads/2025/01/chan-ga-goi-cotton-100-mau-xanh-thien-thanh-SAGATEX-1.png" alt="Banner 3">
+        </div>
+        <div class="banner-dots" style="text-align:center"></div>
+    </div>
+    <div class="container">
+        <aside class="sidebar">
+            <h3><i class="fa-solid fa-filter"></i> Lọc Sản Phẩm</h3>
+            <div class="filter-group">
+                <button class="filter-toggle">Giá <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="filter-options">
+                    <label><input type="checkbox" name="price" value="0-1000000"> Dưới 1.000.000 ₫</label>
+                    <label><input type="checkbox" name="price" value="1000000-2000000"> 1.000.000 ₫ - 2.000.000 ₫</label>
+                    <label><input type="checkbox" name="price" value="2000000-3000000"> 2.000.000 ₫ - 3.000.000 ₫</label>
+                </div>
+            </div>
+             <div class="filter-group">
+                <button class="filter-toggle">Màu Sắc <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="filter-options" data-filter-type="color">
+                    <!-- Color options will be populated by JavaScript -->
+                </div>
+            </div>
+            </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Sản phẩm nổi bật</h1>
+                <div class="sort-options">
+                    <select name="sort" id="sort-select">
+                        <option value="newest">Mới nhất</option>
+                        <option value="price-asc">Giá: Tăng dần</option>
+                        <option value="price-desc">Giá: Giảm dần</option>
+                    </select>
+                </div>
+            </header>
+
+            <div id="product-list" class="product-grid">
+                <div class="loading">Đang tải sản phẩm...</div>
+            </div>
+        </main>
+    </div>
+
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Thông tin liên hệ</h2>
+            <p>Vui lòng liên hệ qua:</p>
+            <ul>
+                <li><strong>Số điện thoại:</strong> 0987.654.321</li>
+                <li><strong>Email:</strong> lienhe@thegioigiacngu.com</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
